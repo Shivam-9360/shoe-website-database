@@ -1,0 +1,228 @@
+-- Cart table
+INSERT INTO Cart (Cart_ID, GrandTotal, ItemTotal) VALUES
+(1, 150.50, 100.00),
+(2, 75.25, 50.50),
+(3, 200.00, 180.00),
+(4, 50.00, 40.00),
+(5, 300.75, 250.25),
+(6, 80.00, 60.00),
+(7, 120.00, 100.00),
+(8, 180.50, 150.75),
+(9, 90.25, 70.50),
+(10, 210.00, 190.00),
+(11, 45.00, 35.50),
+(12, 280.75, 230.25),
+(13, 60.00, 45.00),
+(14, 110.00, 90.00),
+(15, 160.50, 130.75),
+(16, 100.25, 80.50),
+(17, 240.00, 220.00),
+(18, 55.00, 42.50),
+(19, 290.75, 240.25),
+(20, 70.00, 55.00);
+
+-- Customer table
+INSERT INTO Customer (Customer_ID, Cart_ID, FirstName, LastName, PhoneNo, DOB, Email, Age) VALUES
+(1, 1, 'Manya', 'Gor', '1234567890', '1990-05-15', 'manya.gor@gmail.com', 34),
+(2, 2, 'Aaditya', 'Mall', '9876543210', '1985-08-20', 'aaditya.mall@gmail.com', 39),
+(3, 3, 'Shivam', 'Kulkarni', '2345678901', '1982-03-10', 'shivam.kulkarni@gmail.com', 42),
+(4, 4, 'Mansi', 'Chudasama', '3456789012', '1995-11-25', 'mansi.chudasama@gmail.com', 39),
+(5, 5, 'Purav', 'Shah', '4567890123', '1988-09-12', 'purav.shah@gmail.com', 36),
+(6, 6, 'Arushi', 'Sangle', '5678901234', '1980-07-03', 'arushi.sangle@gmail.com', 44),
+(7, 7, 'Matthew', 'Taylor', '6789012345', '1977-04-18', 'matthew.taylor@gmail.com', 47),
+(8, 8, 'Emma', 'Anderson', '7890123456', '1993-02-22', 'emma.anderson@gmail.com', 31),
+(9, 9, 'David', 'Thomas', '8901234567', '1984-06-29', 'david.thomas@gmail.com', 38),
+(10, 10, 'Olivia', 'Jackson', '9012345678', '1975-12-07', 'olivia.jackson@gmail.com', 49),
+(11, 11, 'James', 'White', '0123456789', '1992-10-14', 'james.white@gmail.com', 29),
+(12, 12, 'Sophia', 'Harris', '1234567890', '1983-08-03', 'sophia.harris@gmail.com', 38),
+(13, 13, 'Logan', 'Martin', '2345678901', '1987-01-28', 'logan.martin@gmail.com', 35),
+(14, 14, 'Ava', 'Thompson', '3456789012', '1979-05-11', 'ava.thompson@gmail.com', 42),
+(15, 15, 'Mason', 'Garcia', '4567890123', '1986-04-05', 'mason.garcia@gmail.com', 36),
+(16, 16, 'Isabella', 'Robinson', '5678901234', '1994-03-19', 'isabella.robinson@gmail.com', 28),
+(17, 17, 'Benjamin', 'Clark', '6789012345', '1981-09-24', 'benjamin.clark@gmail.com', 40),
+(18, 18, 'William', 'Lewis', '7890123456', '1978-11-07', 'william.lewis@gmail.com', 43),
+(19, 19, 'Avery', 'Lee', '8901234567', '1991-07-30', 'avery.lee@gmail.com', 30),
+(20, 20, 'Grace', 'Walker', '9012345678', '1989-12-15', 'grace.walker@gmail.com', 32);
+
+-- Category table
+INSERT INTO Category (Category_ID, CategoryName) VALUES
+(1, 'Running Shoes'),
+(2, 'Sneakers'),
+(3, 'Boots'),
+(4, 'Sandals'),
+(5, 'Flip Flops'),
+(6, 'Formal Shoes'),
+(7, 'Casual Shoes'),
+(8, 'Sports Shoes'),
+(9, 'Slippers'),
+(10, 'Heels');
+
+-- Seller table
+INSERT INTO Seller (Seller_ID, PhoneNo, TotalSales, CompanyName) VALUES
+(1, '2345678901', 6000.00, 'ShoeHaven'),
+(2, '3456789012', 4500.50, 'ShoeTopia'),
+(3, '4567890123', 8000.25, 'SoleStore'),
+(4, '8901234567', 6200.00, 'ShoeLand'),
+(5, '9998887776', 3100.75, 'ShoeSpot');
+
+-- Product table
+-- Product table
+INSERT INTO Product (Product_ID, Category_ID, ProductName, Stock, Seller_ID, Brand, MRP, Description) VALUES
+(1, 1, 'Timberland Women''s Jayne 6-Inch Waterproof Boots', 130, 1, 'Timberland', 180.00, 'Stylish and durable boots designed specifically for women with waterproof construction and cushioned footbed'),
+(2, 7, 'Adidas Ultraboost 21 Running Shoes', 190, 2, 'Adidas', 180.00, 'High-performance running shoes with responsive cushioning and a lightweight design for energy return during runs'),
+(3, 2, 'Timberland 6-Inch Premium Waterproof Boots', 150, 2, 'Timberland', 200.00, 'Classic waterproof boots with premium leather and insulation for warmth'),
+(4, 6, 'Birkenstock Arizona Soft Footbed Sandals', 120, 1, 'Birkenstock', 100.00, 'Comfortable sandals with adjustable straps and a soft footbed for support'),
+(5, 3, 'Havaianas Slim Flip Flops', 300, 3, 'Havaianas', 25.00, 'Simple and stylish flip flops with a slim profile and textured footbed'),
+(6, 5, 'Clarks Tilden Cap Toe Oxford Shoes', 100, 1, 'Clarks', 80.00, 'Elegant oxford shoes with a polished leather upper and cushioned insole'),
+(7, 4, 'Vans Classic Slip-On Shoes', 250, 2, 'Vans', 50.00, 'Iconic slip-on shoes featuring canvas uppers and the Vans signature waffle outsole'),
+(8, 8, 'Nike Air Max Excee Running Shoes', 180, 2, 'Nike', 90.00, 'Modern interpretation of the iconic Air Max with lightweight cushioning and durable materials'),
+(9, 1, 'UGG Coquette Slippers', 80, 4, 'UGG', 120.00, 'Luxurious sheepskin slippers with a cozy collar and durable outsole for indoor and outdoor wear'),
+(10, 10, 'Steve Madden Irenee Sandals', 160, 1, 'Steve Madden', 70.00, 'Chic block-heel sandals with a minimalist design and adjustable ankle strap'),
+(11, 9, 'Skechers DLites Memory Foam Sneakers', 220, 2, 'Skechers', 65.00, 'Comfortable sneakers with a retro design and air-cooled memory foam insole'),
+(12, 2, 'Dr. Martens 1460 Smooth Leather Boots', 90, 3, 'Dr. Martens', 150.00, 'Iconic lace-up boots with smooth leather construction and signature air-cushioned sole'),
+(13, 3, 'Converse Chuck Taylor All Star High Tops', 200, 4, 'Converse', 55.00, 'Timeless high-top sneakers with canvas upper and rubber toe cap'),
+(14, 4, 'Crocs Classic Clogs', 300, 5, 'Crocs', 45.00, 'Lightweight and comfortable clogs featuring Croslite foam cushioning and ventilation ports'),
+(15, 5, 'New Balance Fresh Foam Roav Sneakers', 120, 3, 'New Balance', 100.00, 'Versatile sneakers with a fresh foam midsole and stylish design for all-day comfort'),
+(16, 6, 'PUMA Cali Sport Sneakers', 180, 4, 'PUMA', 85.00, 'Sleek sneakers with a leather upper and elevated rubber platform sole for a sporty-chic look'),
+(17, 6, 'Fila Disruptor II Platform Sneakers', 150, 1, 'Fila', 75.00, 'Chunky platform sneakers with a retro-inspired design and cushioned footbed for added comfort'),
+(18, 1, 'ASICS Gel-Kayano 27 Running Shoes', 200, 2, 'ASICS', 160.00, 'High-performance running shoes with gel cushioning and a breathable mesh upper for long-distance comfort'),
+(19, 1, 'Reebok Classic Leather Sneakers', 140, 1, 'Reebok', 70.00, 'Timeless sneakers with a soft leather upper and cushioned midsole for everyday wear'),
+(20, 9, 'Merrell Moab 2 Waterproof Hiking Boots', 1, 3, 'Merrell', 130.00, 'Durable hiking boots featuring waterproof construction and Vibram traction outsole for rugged terrain');
+
+-- Contains table
+INSERT INTO Contains (Product_ID, Cart_ID) VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6),
+(7, 7),
+(8, 8),
+(9, 9),
+(10, 10),
+(11, 11),
+(12, 12),
+(13, 13),
+(14, 14),
+(15, 15),
+(16, 16),
+(17, 17),
+(18, 18),
+(19, 19),
+(20, 20);
+
+-- Orders table
+INSERT INTO Orders (Order_ID, Customer_ID, OrderStatus, OrderAmount, OrderDate, ShippingDate) VALUES
+(1, 1, 'Shipped', 150.50, '2024-03-01', '2024-03-03'),
+(2, 2, 'Delivered', 75.25, '2024-03-05', '2024-03-07'),
+(3, 3, 'Pending', 200.00, '2024-03-10', '2024-03-12'),
+(4, 4, 'Processing', 50.00, '2024-03-12', '2024-03-14'),
+(5, 5, 'Shipped', 300.75, '2024-03-15', '2024-03-17'),
+(6, 6, 'Delivered', 80.00, '2024-03-18', '2024-03-20'),
+(7, 7, 'Pending', 120.00, '2024-03-21', '2024-03-23'),
+(8, 8, 'Shipped', 180.50, '2024-03-22', '2024-03-24'),
+(9, 9, 'Delivered', 90.25, '2024-03-25', '2024-03-27'),
+(10, 10, 'Processing', 210.00, '2024-03-28', '2024-03-30'),
+(11, 11, 'Shipped', 45.00, '2024-03-30', '2024-04-01'),
+(12, 12, 'Delivered', 280.75, '2024-04-02', '2024-04-04'),
+(13, 13, 'Pending', 60.00, '2024-04-05', '2024-04-07'),
+(14, 14, 'Shipped', 110.00, '2024-04-08', '2024-04-10'),
+(15, 15, 'Delivered', 160.50, '2024-04-11', '2024-04-13'),
+(16, 16, 'Pending', 100.25, '2024-04-14', '2024-04-16'),
+(17, 17, 'Shipped', 240.00, '2024-04-17', '2024-04-19'),
+(18, 18, 'Delivered', 55.00, '2024-04-20', '2024-04-22'),
+(19, 19, 'Processing', 290.75, '2024-04-23', '2024-04-25'),
+(20, 20, 'Shipped', 70.00, '2024-04-26', '2024-04-28');
+
+-- OrderItem table
+INSERT INTO OrderItem (OrderItem_ID, Order_ID, Quantity) VALUES
+(1, 1, 2),
+(2, 1, 1),
+(3, 2, 3),
+(4, 2, 1),
+(5, 3, 1),
+(6, 4, 2),
+(7, 4, 1),
+(8, 5, 2),
+(9, 5, 1),
+(10, 6, 1),
+(11, 7, 3),
+(12, 8, 2),
+(13, 9, 1),
+(14, 10, 2),
+(15, 10, 1),
+(16, 11, 1),
+(17, 12, 2),
+(18, 13, 1),
+(19, 14, 3),
+(20, 15, 2);
+
+-- Payment table
+INSERT INTO Payment (Order_ID, Customer_ID, PaymentMode) VALUES
+(1, 1, 'Credit Card'),
+(2, 2, 'PayPal'),
+(3, 3, 'Debit Card'),
+(4, 4, 'Cash on Delivery'),
+(5, 5, 'Credit Card'),
+(6, 6, 'Google Pay'),
+(7, 7, 'Apple Pay'),
+(8, 8, 'Credit Card'),
+(9, 9, 'Debit Card'),
+(10, 10, 'Credit Card'),
+(11, 11, 'PayPal'),
+(12, 12, 'Credit Card'),
+(13, 13, 'Cash on Delivery'),
+(14, 14, 'Credit Card'),
+(15, 15, 'Debit Card'),
+(16, 16, 'Credit Card'),
+(17, 17, 'PayPal'),
+(18, 18, 'Credit Card'),
+(19, 19, 'Debit Card'),
+(20, 20, 'Credit Card');
+
+-- Review table
+INSERT INTO Review (Product_ID, Customer_ID, Rating, Description) VALUES
+(1, 1, 5, 'Great shoes, very comfortable!'),
+(2, 2, 4, 'Nice design, but a bit tight at first.'),
+(3, 3, 5, 'Excellent boots, durable and waterproof.'),
+(4, 4, 3, 'Sandals are okay, not as supportive as expected.'),
+(5, 5, 5, 'Love these flip flops, perfect for the beach!'),
+(6, 6, 4, 'Stylish formal shoes, good for work.'),
+(7, 7, 5, 'Classic slip-on shoes, very convenient.'),
+(8, 8, 4, 'Comfortable running shoes, great for jogging.'),
+(9, 9, 3, 'Cozy slippers, but a bit pricey.'),
+(10, 10, 5, 'Beautiful sandals, very elegant.'),
+(11, 11, 4, 'Good sneakers, comfortable for walking.'),
+(12, 12, 5, 'Iconic boots, love the style!'),
+(13, 13, 3, 'High-top sneakers are okay, but not my favorite style.'),
+(14, 14, 5, 'Crocs are always comfortable and practical.'),
+(15, 15, 4, 'New Balance sneakers have great cushioning.'),
+(16, 16, 3, 'PUMA sneakers look good but not very supportive.'),
+(17, 17, 5, 'Fila sneakers are trendy and comfortable.'),
+(18, 18, 4, 'ASICS running shoes provide good stability.'),
+(19, 19, 3, 'Reebok sneakers are decent but not exceptional.'),
+(20, 20, 5, 'Merrell boots are perfect for hiking, very sturdy.');
+
+-- Address table
+INSERT INTO Address (Address_ID, City, State, ApartmentNumber, DoorNo, Pincode, StreetName, Customer_ID) VALUES
+(1, 'New York', 'NY', 'Apt 101', '123', '10001', 'Broadway St', 1),
+(2, 'Los Angeles', 'CA', 'Unit 201', '456', '90001', 'Sunset Blvd', 2),
+(3, 'Chicago', 'IL', 'Apt 301', '789', '60601', 'Michigan Ave', 3),
+(4, 'Houston', 'TX', 'Unit 401', '1011', '77001', 'Main St', 4),
+(5, 'Phoenix', 'AZ', 'Apt 501', '1213', '85001', 'Central Ave', 5),
+(6, 'Philadelphia', 'PA', 'Unit 601', '1415', '19101', 'Market St', 6),
+(7, 'San Antonio', 'TX', 'Apt 701', '1617', '78201', 'Riverwalk', 7),
+(8, 'San Diego', 'CA', 'Unit 801', '1819', '92101', 'Ocean Blvd', 8),
+(9, 'Dallas', 'TX', 'Apt 901', '2021', '75201', 'Elm St', 9),
+(10, 'San Jose', 'CA', 'Unit 1001', '2223', '95101', 'Santa Clara St', 10),
+(11, 'Austin', 'TX', 'Apt 1101', '2425', '78701', 'Congress Ave', 11),
+(12, 'Jacksonville', 'FL', 'Unit 1201', '2627', '32201', 'Bay St', 12),
+(13, 'Fort Worth', 'TX', 'Apt 1301', '2829', '76101', 'Main St', 13),
+(14, 'Columbus', 'OH', 'Unit 1401', '3031', '43201', 'High St', 14),
+(15, 'Charlotte', 'NC', 'Apt 1501', '3233', '28201', 'Trade St', 15),
+(16, 'San Francisco', 'CA', 'Unit 1601', '3435', '94101', 'Market St', 16),
+(17, 'Indianapolis', 'IN', 'Apt 1701', '3637', '46201', 'Monument Cir', 17),
+(18, 'Seattle', 'WA', 'Unit 1801', '3839', '98101', 'Pike St', 18),
+(19, 'Denver', 'CO', 'Apt 1901', '4041', '80201', 'Colfax Ave', 19),
+(20, 'Washington', 'DC', 'Unit 2001', '4243', '20001', 'Pennsylvania Ave', 20);
